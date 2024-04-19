@@ -1,11 +1,5 @@
 <?php
 	$file_name = "data.json";
-	$parent = "";
-	
-	if($_POST["parent"] !== "")
-	{
-		echo "WSEMYDACHI";
-	}
 	
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
@@ -17,7 +11,7 @@
 		
 		$json_arr = json_decode($data, true);
 		
-		$json_arr[] = array("fio" => $_REQUEST["fio"]);
+		$json_arr[] = array("fio" => $_REQUEST["fio"], "parent" => $_REQUEST["parent"]);
 		
 		file_put_contents($file_name, json_encode($json_arr));
 		
