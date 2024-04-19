@@ -3,4 +3,5 @@
 	
 	require ("form.html");
 	require ("form.php");
+	require ("treedraw.php");
 ?>
