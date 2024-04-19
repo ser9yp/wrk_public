@@ -1,5 +1,5 @@
 <?php
-$data = file_get_contents('data.json');
+$data = file_get_contents("data.json");
 $options = json_decode($data, true);
 ?>
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ $options = json_decode($data, true);
 	</head>
 	<body>
 		<form method="POST" aciton="form.php">
-			<select>
+			<select name="parent">
 				<option disabled selected>Pick parent</option>
 				<?php foreach ($options as $option): ?>
 					<option value="<?php echo $option['fio']; ?>"><?php echo $option['fio']; ?></option>
